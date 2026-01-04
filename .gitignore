@@ -1,5 +1,11 @@
 # Virtual environment
 .venv/
+env/
+
+# Data files
+data/
+data/*.csv
+data/*.parquet
 
 # Python cache
 pycache/
@@ -11,3 +17,8 @@ pycache/
 # OS files
 .DS_Store
 Thumbs.db
+
+# 
+*.png 
+.vscode/
+idea/
