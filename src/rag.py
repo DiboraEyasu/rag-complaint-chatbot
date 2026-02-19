@@ -19,11 +19,12 @@ class RAGPipeline:
 
         # Load generator LLM (lightweight but effective)
         self.generator = pipeline(
-            "text-generation",
-            model="google/flan-t5-small",
-            max_new_tokens=300,
-            temperature=0.2
-        )
+            "text2text-generation",   # <--- fix here
+               model="google/flan-t5-small",
+               
+                  max_new_tokens=300,
+              temperature=0.2
+)
     def retrieve(self, question, k=5):
         # Embed the question
         question_vector = self.embedder.encode([question]).astype("float32")
